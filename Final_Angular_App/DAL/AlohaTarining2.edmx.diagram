@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23c92863148b4b888cf611fb41c06844" Name="Diagram1">
+        <EntityTypeShape EntityType="AlohaTrainingModel.Address" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Area" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Branch" Width="1.5" PointX="7.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.City" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Customer" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Department" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Gender" Width="1.5" PointX="8.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Order" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.product" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.State" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.Type" Width="1.5" PointX="9.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlohaTrainingModel.user" Width="1.5" PointX="7.75" PointY="10.375" IsExpanded="true" />
+        <AssociationConnector Association="AlohaTrainingModel.FK__Address__Custome__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="AlohaTrainingModel.FK__Area__CityId__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="AlohaTrainingModel.FK__City__StateId__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="AlohaTrainingModel.FK__Orders__Customer__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="AlohaTrainingModel.FK__Orders__ProductI__5EBF139D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

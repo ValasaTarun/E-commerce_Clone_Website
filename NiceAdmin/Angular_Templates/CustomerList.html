@@ -1,0 +1,74 @@
+<div class="col-lg-6" ng-if="isLogined">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Customer Actions</h5>
+
+
+      <a href="#!AddCustomer " class="btn btn-primary">Add Customer</a>
+
+    </div>
+  </div>
+</div>
+<div class="card" ng-if="isLogined">
+  <div class="card-body">
+
+    <!-- <div class="modal fade" id="basicModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Basic Modal</h5>
+              <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#basicModal2" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    <h5 class="card-title">Customers</h5>
+
+    <div class="table-responsive">
+      <!-- Table with stripped rows -->
+      <table class="table datatable  table-bordred table-striped">
+        <thead>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Department</th>
+          <th scope="col">State</th>
+          <th scope="col">City</th>
+          <th scope="col">Area</th>
+          <th scope="col">ZipCode</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in ListOfCustomers">
+            <!-- <td>{{item.Id}}</td> -->
+            <td>{{item.Name}}</td>
+            <td>{{item.Type}}</td>
+            <td>{{item.Gender}}</td>
+            <td>{{item.Department}}</td>
+            <td>{{item.State}}</td>
+            <td>{{item.City}}</td>
+            <td>{{item.Area}}</td>
+            <td>{{item.ZipCode}}</td>
+
+            <td><a class="btn btn-primary btn-xs" href="#!/EditCustomer/{{item.Id}}">
+                <span class="glyphicon glyphicon-pencil"></span>Edit</a></td>
+            <td><a class="btn btn-danger btn-xs" href="#!/DeleteCustomer/{{item.Id}}">
+                <span class="glyphicon glyphicon-trash"></span>Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- End Table with stripped rows -->
+  </div>
+</div>
+</div>
+</div>

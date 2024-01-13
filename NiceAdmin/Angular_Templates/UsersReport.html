@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">All Users</h5>
+
+      <!-- Table with stripped rows -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">Password</th>
+            <th scope="col">Email</th>
+            <th scope="col">PhoneNumber</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in ListOfUsers">
+            <!-- <td>{{item.Id}}</td> -->
+            <td>{{item.UserName}}</td>
+            <td>{{item.Password}}</td>
+            <td>{{item.Email}}</td>
+            <td>{{item.PhoneNumber}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <!-- End Table with stripped rows -->
+
+    </div>
+  </div>

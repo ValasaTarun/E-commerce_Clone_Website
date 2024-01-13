@@ -1,0 +1,73 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Vertical Form</h5>
+
+      <!-- Vertical Form -->
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="inputNanme4" class="form-label">Enter Name</label>
+          <input type="text" class="form-control" id="inputNanme4" ng-model="Name">
+        </div>
+        <div class="col-12">
+          <label for="inputNanme4" class="form-label">Enter Type</label>
+          <div class="form-check">
+            <label ng-repeat="type in Types" class="form-check-label p-1 me-4" for="radio1">
+                <input  type="radio" class="form-check-input"  name="Type" value="{{type.Id}}" ng-model="$parent.Type">{{type.Name}}
+            </label>
+        </div>
+        </div>
+        <div class="col-12">
+          <label for="inputEmail4" class="form-label">Please Select Gender</label>
+          <select  class="form-control" id="exampleFormControlSelect1" ng-model="Gender">
+            <option value="">Please Select Gender</option>
+            <option ng-repeat="gender in Genders" value="{{gender.Id}}">{{gender.Name}}</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="" class="form-label">Choose Department</label>
+          <select  class="form-control" id="exampleFormControlSelect1" ng-model="Department">
+            <option value="">Please Select Department</option>
+            <option ng-repeat="department in Departments" value="{{department.Id}}">{{department.Name}}</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="" class="form-label">Choose State</label>
+          <select ng-change="GetCity()" class="form-control" id="exampleFormControlSelect1" ng-model="State">
+            <option value="">Please Select State</option>
+            <option ng-repeat="state in States" value="{{state.Id}}">{{state.Name}}</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="" class="form-label">Choose City</label>
+          <select ng-change="GetArea()" class="form-control" id="exampleFormControlSelect1" ng-model="City">
+            <option value="">Please Select City</option>
+            <option ng-repeat="city in Cities" value="{{city.Id}}">{{city.Name}}</option>
+        </select>
+        </div>
+
+
+        <div class="col-12">
+          <label for="" class="form-label">Choose Area</label>
+          <select  class="form-control" id="exampleFormControlSelect1" ng-model="Area">
+            <option value="">Please Select Area</option>
+            <option ng-repeat="area in Areas" value="{{area.Id}}">{{area.Name}}</option>
+        </select>
+        </div>
+
+        <div class="col-12">
+          <label for="inputPassword4" class="form-label">Enter Zip Code</label>
+          <input type="text" class="form-control" id="ZipCode" ng-model="ZipCode">
+        </div>
+
+        <div class="text-center">
+          <button ng-click="Add()" type="submit" class="btn btn-primary">Submit</button>
+          <button ng-click="Close()"  class="btn btn-secondary">Close</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form><!-- Vertical Form -->
+
+    </div>
+  </div> 

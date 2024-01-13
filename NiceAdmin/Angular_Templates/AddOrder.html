@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Vertical Form</h5>
+
+    <!-- Vertical Form -->
+    <form class="row g-3">
+      <div class="col-12">
+        <label for="inputNanme4" class="form-label">Order Date</label>
+        <input ng-change="printDate()" type="date" min="01-01-1920" max="01-01-2120" class="form-control" id="inputNanme4" ng-model="OrderDate">
+      </div>
+
+      <div class="col-12">
+        <label for="inputEmail4" class="form-label">Please Select Customer</label>
+        <select  class="form-control" id="exampleFormControlSelect1" ng-model="CustomerName">
+          <option value="">Please Select Customer</option>
+          <option ng-repeat="customer in ListOfCustomers" value="{{customer.Id}}">{{customer.Name}}</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label for="" class="form-label">Choose Product</label>
+        <select ng-change="updatePrice()" class="form-control" id="exampleFormControlSelect1" ng-model="ProductName">
+          <option value="">Please Select Product</option>
+          <option ng-repeat="product in ListOfProducts" value="{{product.Id}}">{{product.Name}}</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label for="inputNanme4" class="form-label">Quantity</label>
+        <input ng-change="updateTotal()" type="number" class="form-control" id="inputNanme4" ng-model="Quantity">
+      </div>
+
+      <div class="col-12">
+        <label for="inputNanme4" class="form-label">Price</label>
+        <input type="text" class="form-control" id="inputNanme4" ng-model="Price" disabled>
+      </div>
+
+      <div class="col-12">
+        <label for="inputNanme4" class="form-label">Total</label>
+        <input type="text" class="form-control" id="inputNanme4" ng-model="Total" disabled>
+      </div>
+
+      <div class="text-center">
+        <button ng-click="AddOrder()" type="submit" class="btn btn-primary">Submit</button>
+        
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </div>
+    </form><!-- Vertical Form -->
+
+  </div>
+</div> 

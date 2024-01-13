@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Vertical Form</h5>
+
+    <!-- Vertical Form -->
+    <form class="row g-3">
+      <div class="col-12">
+        <label for="inputNanme4" class="form-label">From Date</label>
+        <input ng-change="printDate()" type="date" min="01-01-1920" max="01-01-2120" class="form-control" id="inputNanme4" ng-model="startDate">
+      </div>
+      <div class="col-12">
+        <label for="inputNanme4" class="form-label">Till Date</label>
+        <input ng-change="printDate()" type="date" min="01-01-1920" max="01-01-2120" class="form-control" id="inputNanme4" ng-model="endDate">
+      </div>
+
+      <div class="text-center">
+        <button ng-click="OrdersReport()" type="submit" class="btn btn-primary">Submit</button>
+        
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </div>
+    </form><!-- Vertical Form -->
+
+  </div>
+</div> 
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">All Orders</h5>
+
+      <!-- Table with stripped rows -->
+      <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">OrderDate</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">ProductName</th>
+            <th scope="col">CustomerName</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in ordersReport">
+            <!-- <td>{{item.Id}}</td> -->
+            <td>{{item.OrderDate}}</td>
+            <td>{{item.Quantity}}</td>
+            <td>{{item.Price}}</td>
+            <td>{{item.Total}}</td>
+            <td>{{item.ProductName}}</td>
+            <td>{{item.CustomerName}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- End Table with stripped rows -->
+    </div>
+    </div>
+  </div>
